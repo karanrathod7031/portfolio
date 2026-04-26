@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Rathod | Full Stack Developer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="m-0 bg-slate-50 font-inter text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#home" class="flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-900 text-sm font-black text-white">KR</span>
+        <div>
+          <p class="text-sm font-extrabold leading-none">Karan Rathod</p>
+          <p class="mt-1 text-xs font-medium text-slate-500">Full Stack Developer</p>
+        </div>
+      </a>
+
+      <div class="hidden items-center gap-6 text-sm font-semibold text-slate-600 md:flex">
+        <a href="#about" class="transition hover:text-slate-950">About</a>
+        <a href="#experience" class="transition hover:text-slate-950">Experience</a>
+        <a href="#projects" class="transition hover:text-slate-950">Projects</a>
+        <a href="#skills" class="transition hover:text-slate-950">Skills</a>
+        <a href="#contact" class="transition hover:text-slate-950">Contact</a>
+      </div>
+
+      <a href="./resume.pdf" class="hidden rounded-xl bg-slate-900 px-4 py-2 text-sm font-bold text-white transition hover:bg-blue-600 md:inline-flex">
+        Resume
+      </a>
+
+      <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 md:hidden" aria-label="Open menu">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-5 py-3 md:hidden">
+      <a href="#about" class="block py-2 text-sm font-semibold text-slate-700">About</a>
+      <a href="#experience" class="block py-2 text-sm font-semibold text-slate-700">Experience</a>
+      <a href="#projects" class="block py-2 text-sm font-semibold text-slate-700">Projects</a>
+      <a href="#skills" class="block py-2 text-sm font-semibold text-slate-700">Skills</a>
+      <a href="#contact" class="block py-2 text-sm font-semibold text-slate-700">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="mx-auto max-w-6xl px-5 pt-8 pb-12 md:pt-12 md:pb-14">
+      <div class="max-w-4xl">
+        <p class="mb-3 inline-flex rounded-full bg-blue-50 px-4 py-2 text-sm font-bold text-blue-700">
+          Open to Software Internships
+        </p>
+
+        <h1 class="text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-5xl md:text-6xl">
+          I build scalable, real-world web applications that solve practical problems with clean, maintainable code.
+        </h1>
+
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+          Computer Science Engineering student with hands-on internship experience. I specialize in building end-to-end applications with clean UI, scalable backend systems, and strong problem-solving fundamentals.
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a href="#projects" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-blue-700 active:scale-95">
+            View Projects <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-900 transition hover:border-blue-600 hover:text-blue-600 active:scale-95">
+            Contact Me
+          </a>
+        </div>
+      </div>
+<!-- 
+      <div class="mt-8 grid gap-4 sm:grid-cols-4">
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="text-2xl font-black text-slate-950">1</p>
+          <p class="mt-1 text-sm font-medium text-slate-500">Internship</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="text-2xl font-black text-slate-950">10+</p>
+          <p class="mt-1 text-sm font-medium text-slate-500">Projects</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="text-2xl font-black text-slate-950">MERN</p>
+          <p class="mt-1 text-sm font-medium text-slate-500">Learning Stack</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+          <p class="text-2xl font-black text-slate-950">2027</p>
+          <p class="mt-1 text-sm font-medium text-slate-500">Graduation</p>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- About -->
+    <section id="about" class="border-y border-slate-200 bg-white py-12">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="grid gap-8 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-blue-600">About</p>
+            <h2 class="mt-3 text-4xl font-black tracking-tight text-slate-950">Why hire me?</h2>
+          </div>
+          <div class="space-y-4 text-base leading-8 text-slate-600">
+            <p>
+              I design and build complete applications — from frontend interfaces to backend APIs and database systems. I focus on writing clean, structured code and delivering solutions that are practical, efficient, and user-focused.
+            </p>
+            <p>
+              Currently strengthening my skills in Data Structures & Algorithms, full-stack development, and system design to prepare for software engineering roles at top tech companies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section id="experience" class="mx-auto max-w-6xl px-5 py-12">
+      <div class="mb-6">
+        <p class="text-sm font-bold uppercase tracking-widest text-blue-600">Journey</p>
+        <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950">Education & Internship</h2>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <div class="mb-5 flex items-center gap-3">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-blue-600">
+              <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+            </span>
+            <h3 class="text-xl font-extrabold">Education</h3>
+          </div>
+
+          <div class="space-y-6 border-l border-slate-200 pl-5">
+            <div>
+              <p class="text-sm font-bold text-blue-600">2024 – 2027</p>
+              <h4 class="mt-1 font-extrabold text-slate-950">B.E. Computer Science</h4>
+              <p class="mt-1 text-sm text-slate-500">Sant Gadge Baba Amravati University (SGBAU)</p>
+              <span class="mt-2 inline-flex rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-green-700">Pursuing</span>
+            </div>
+
+            <div>
+              <p class="text-sm font-bold text-blue-600">2021 – 2024</p>
+              <h4 class="mt-1 font-extrabold text-slate-950">Diploma in Computer Engineering</h4>
+              <p class="mt-1 text-sm text-slate-500">Maharashtra State Board of Technical Education (MSBTE)</p>
+              <span class="mt-2 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <div class="mb-5 flex items-center gap-3">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-purple-50 text-purple-600">
+              <i data-lucide="briefcase" class="h-5 w-5"></i>
+            </span>
+            <h3 class="text-xl font-extrabold">Internship</h3>
+          </div>
+
+          <div class="border-l border-slate-200 pl-5">
+            <p class="text-sm font-bold text-purple-600">Jun 2023 – Sep 2023</p>
+            <h4 class="mt-1 font-extrabold text-slate-950">Trainee Software Developer</h4>
+            <p class="mt-1 text-sm text-slate-500">Avirat Infotech, Pune</p>
+
+            <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-600">
+              <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-green-600"></i>Developed a CRUD-based study material web application.</li>
+              <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-green-600"></i>Collaborated with team members to improve usability and performance.</li>
+              <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-green-600"></i>Worked on frontend, backend, and database integration.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="border-y border-slate-200 bg-white py-12">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-blue-600">Projects</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950">Proof of Work</h2>
+          </div>
+          <p class="max-w-md text-sm leading-6 text-slate-500">Selected projects that demonstrate practical engineering, problem solving, and product thinking.</p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-blue-300 hover:shadow-lg">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">01</span>
+              <i data-lucide="scissors" class="text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-950">YouTube Video Clipping & Shorts Generator</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+              <li><strong>Problem:</strong> Manual clipping of long videos into Shorts is slow and repetitive.</li>
+              <li><strong>Solution:</strong> Built a PHP + FFmpeg tool to auto-process clips with resolution selection and batching.</li>
+              <li><strong>Impact:</strong> Reduced manual editing time by ~70% and enabled bulk clip export via ZIP.</li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">PHP</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">FFmpeg</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">Video Processing</span>
+            </div>
+            <div class="mt-5 flex gap-4 text-sm font-bold">
+              <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
+              <a href="#" class="text-slate-600 hover:text-slate-950 hover:underline">Source Code</a>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-blue-300 hover:shadow-lg">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">02</span>
+              <i data-lucide="shopping-cart" class="text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-950">Dynamic E-Commerce Website</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+              <li><strong>Problem:</strong> Managing products manually is inefficient and error-prone.</li>
+              <li><strong>Solution:</strong> Built admin & user panels with authentication and CRUD product management using PHP + MySQL.</li>
+              <li><strong>Impact:</strong> Streamlined product operations and reduced manual work by ~60%.</li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">PHP</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">MySQL</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">Authentication</span>
+            </div>
+            <div class="mt-5 flex gap-4 text-sm font-bold">
+              <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
+              <a href="#" class="text-slate-600 hover:text-slate-950 hover:underline">Source Code</a>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-blue-300 hover:shadow-lg">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">03</span>
+              <i data-lucide="utensils" class="text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-950">Smart Canteen System</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+              <li><strong>Problem:</strong> Long queues and manual order handling in canteens.</li>
+              <li><strong>Solution:</strong> Built a real-time ordering system with student UI and admin dashboard using React + Node + MongoDB.</li>
+              <li><strong>Impact:</strong> Enabled faster ordering and real-time tracking, improving efficiency and user experience.</li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">React</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">Node.js</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">MongoDB</span>
+            </div>
+            <div class="mt-5 flex gap-4 text-sm font-bold">
+              <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
+              <a href="#" class="text-slate-600 hover:text-slate-950 hover:underline">Source Code</a>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-blue-300 hover:shadow-lg">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">04</span>
+              <i data-lucide="bot" class="text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-950">Jarvis AI Assistant</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+              <li><strong>Problem:</strong> Repetitive tasks reduce productivity.</li>
+              <li><strong>Solution:</strong> Designed an AI assistant concept to automate tasks and workflows using Python and AI tools.</li>
+              <li><strong>Impact:</strong> Demonstrates ability to build intelligent automation systems.</li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">Python</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">AI</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">Automation</span>
+            </div>
+            <div class="mt-5 flex gap-4 text-sm font-bold">
+              <a href="#" class="text-blue-600 hover:underline">Live Demo</a>
+              <a href="#" class="text-slate-600 hover:text-slate-950 hover:underline">Source Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mx-auto max-w-6xl px-5 py-12">
+      <div class="mb-6">
+        <p class="text-sm font-bold uppercase tracking-widest text-blue-600">Skills</p>
+        <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950">Focused Tech Stack</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">React.js</span>
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">JavaScript</span>
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">Node.js</span>
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">PHP</span>
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">MySQL</span>
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">Git</span>
+        <span class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700">FFmpeg</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-slate-900 py-12 text-white">
+      <div class="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-[1fr_0.9fr] md:items-center">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-widest text-blue-300">Contact</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Let’s build something useful.</h2>
+          <p class="mt-4 max-w-xl leading-8 text-white/65">Actively seeking software engineering internship opportunities and open to impactful collaborations.</p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="https://github.com/karanrathod7031" target="_blank" class="grid h-11 w-11 place-items-center rounded-xl bg-white/10 transition hover:bg-white/20" aria-label="GitHub">
+              <i data-lucide="github" class="h-5 w-5"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/karanrathod2027" target="_blank" class="grid h-11 w-11 place-items-center rounded-xl bg-white/10 transition hover:bg-white/20" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="h-5 w-5"></i>
+            </a>
+            <a href="mailto:karanrathod7031@gmail.com" class="grid h-11 w-11 place-items-center rounded-xl bg-white/10 transition hover:bg-white/20" aria-label="Email">
+              <i data-lucide="mail" class="h-5 w-5"></i>
+            </a>
+            <a href="./resume.pdf" class="grid h-11 w-11 place-items-center rounded-xl bg-blue-500 transition hover:bg-blue-400" aria-label="Resume">
+              <i data-lucide="download" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full rounded-xl border border-white/10 bg-white/10 p-3 text-sm text-white outline-none placeholder:text-white/40 focus:border-blue-300" />
+          <input type="email" placeholder="Your Email" class="w-full rounded-xl border border-white/10 bg-white/10 p-3 text-sm text-white outline-none placeholder:text-white/40 focus:border-blue-300" />
+          <textarea placeholder="Message" rows="4" class="w-full resize-none rounded-xl border border-white/10 bg-white/10 p-3 text-sm text-white outline-none placeholder:text-white/40 focus:border-blue-300"></textarea>
+          <button class="w-full rounded-xl bg-blue-500 py-3 text-sm font-bold text-white transition hover:bg-blue-400">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 border-t border-white/10 py-5 text-center text-sm font-medium text-white/45">
+    © 2026 Karan Rathod. Built with HTML + Tailwind CSS.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
